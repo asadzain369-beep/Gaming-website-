@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>Shadow SMP - Admin Dashboard</title>
+
+<link
+rel="stylesheet"
+href="css/style.css">
+</head>
+
+<body>
+
+<section class="section">
+
+<p class="eyebrow">
+CONTROL CENTER
+</p>
+
+<h1>
+Admin Dashboard
+</h1>
+
+<p
+id="adminMessage"
+class="message">
+</p>
+
+<div class="admin-grid">
+
+<article class="admin-card">
+<h2>Server Control</h2>
+
+<form id="serverForm">
+
+<label>Status</label>
+
+<select id="serverOnline">
+<option value="true">
+Online
+</option>
+
+<option value="false">
+Offline
+</option>
+</select>
+
+<label>Players</label>
+
+<input
+id="serverPlayers"
+type="number"
+min="0">
+
+<label>Maximum Players</label>
+
+<input
+id="serverMaxPlayers"
+type="number"
+min="1">
+
+<label>Server IP</label>
+
+<input id="serverIp">
+
+<button
+class="btn"
+type="submit">
+Save Server
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Rules Management</h2>
+
+<form id="rulesForm">
+
+<textarea
+id="rulesContent"
+required>
+</textarea>
+
+<button
+class="btn"
+type="submit">
+Save Rules
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Whitelist Players</h2>
+
+<form id="whitelistForm">
+
+<input
+id="whitelistMinecraftId"
+placeholder="Minecraft ID"
+required>
+
+<input
+id="whitelistPlayerName"
+placeholder="Player Name">
+
+<button
+class="btn"
+type="submit">
+Add Player
+</button>
+
+</form>
+
+<div id="adminWhitelistList"></div>
+</article>
+
+
+<article class="admin-card">
+<h2>Banned Players</h2>
+
+<form id="banForm">
+
+<input
+id="banMinecraftId"
+placeholder="Minecraft ID"
+required>
+
+<input
+id="banPlayerName"
+placeholder="Player Name">
+
+<input
+id="banReason"
+placeholder="Reason">
+
+<button
+class="btn"
+type="submit">
+Ban Player
+</button>
+
+</form>
+
+<div id="adminBannedList"></div>
+</article>
+
+
+<article class="admin-card">
+<h2>Problems</h2>
+
+<div id="adminProblems">
+Loading problems...
+</div>
+
+</article>
+
+
+<article class="admin-card">
+<h2>Building Event</h2>
+
+<form id="buildingEventForm">
+
+<input
+id="buildingTitle"
+placeholder="Title"
+required>
+
+<textarea
+id="buildingDescription"
+placeholder="Description">
+</textarea>
+
+<input
+id="buildingProgress"
+type="number"
+min="0"
+max="100"
+placeholder="Progress %">
+
+<input
+id="buildingDate"
+type="datetime-local">
+
+<button
+class="btn"
+type="submit">
+Save Building Event
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>PvP Event</h2>
+
+<form id="pvpEventForm">
+
+<input
+id="pvpTitle"
+placeholder="Title"
+required>
+
+<textarea
+id="pvpDescription">
+</textarea>
+
+<input
+id="pvpProgress"
+type="number"
+min="0"
+max="100">
+
+<input
+id="pvpDate"
+type="datetime-local">
+
+<button
+class="btn"
+type="submit">
+Save PvP Event
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Parkour Event</h2>
+
+<form id="parkourEventForm">
+
+<input
+id="parkourTitle"
+placeholder="Title"
+required>
+
+<textarea
+id="parkourDescription">
+</textarea>
+
+<input
+id="parkourProgress"
+type="number"
+min="0"
+max="100">
+
+<input
+id="parkourDate"
+type="datetime-local">
+
+<button
+class="btn"
+type="submit">
+Save Parkour Event
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Announcements</h2>
+
+<form id="announcementForm">
+
+<input
+id="announcementTitle"
+placeholder="Title"
+required>
+
+<textarea
+id="announcementContent"
+placeholder="Announcement"
+required>
+</textarea>
+
+<button
+class="btn"
+type="submit">
+Publish
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Leaderboard</h2>
+
+<form id="leaderboardForm">
+
+<input
+id="leaderboardName"
+placeholder="Minecraft ID"
+required>
+
+<input
+id="leaderboardPoints"
+type="number"
+min="0">
+
+<input
+id="leaderboardKills"
+type="number"
+min="0">
+
+<input
+id="leaderboardWins"
+type="number"
+min="0">
+
+<button
+class="btn"
+type="submit">
+Save Player Stats
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Home Page</h2>
+
+<form id="homeForm">
+
+<input
+id="siteTitle"
+placeholder="Website Title">
+
+<input
+id="heroHeading"
+placeholder="Hero Heading">
+
+<textarea
+id="heroDescription">
+</textarea>
+
+<button
+class="btn"
+type="submit">
+Save Home
+</button>
+
+</form>
+</article>
+
+
+<article class="admin-card">
+<h2>Custom Sections</h2>
+
+<form id="customSectionForm">
+
+<input
+id="sectionName"
+placeholder="Section Name"
+required>
+
+<select id="sectionPage">
+
+<option>Home</option>
+<option>Rules</option>
+<option>Players</option>
+<option>Events</option>
+<option>Problems</option>
+<option>Leaderboard</option>
+<option>Announcements</option>
+<option>Server</option>
+
+</select>
+
+<input
+id="sectionHeading"
+placeholder="Heading">
+
+<textarea
+id="sectionContent"
+placeholder="Content">
+</textarea>
+
+<input
+id="sectionFont"
+value="Arial"
+placeholder="Font">
+
+<input
+id="sectionFontSize"
+value="16px"
+placeholder="Font Size">
+
+<input
+id="sectionTextColor"
+type="color"
+value="#ffffff">
+
+<input
+id="sectionBackground"
+type="color"
+value="#12151c">
+
+<input
+id="sectionPadding"
+value="40px"
+placeholder="Padding">
+
+<input
+id="sectionMargin"
+value="20px 0"
+placeholder="Margin">
+
+<input
+id="sectionRadius"
+value="14px"
+placeholder="Border Radius">
+
+<select id="sectionAlignment">
+
+<option>left</option>
+<option>center</option>
+<option>right</option>
+
+</select>
+
+<select id="sectionVisible">
+
+<option value="true">
+Visible
+</option>
+
+<option value="false">
+Hidden
+</option>
+
+</select>
+
+<button
+class="btn"
+type="submit">
+Create Section
+</button>
+
+</form>
+
+<div id="customSectionList"></div>
+
+</article>
+
+</div>
+
+</section>
+
+<button
+id="adminLogout"
+class="btn">
+Logout
+</button>
+
+<script
+type="module"
+src="js/admin.js">
+</script>
+
+</body>
+  </html>
