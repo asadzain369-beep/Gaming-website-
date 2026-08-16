@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>Shadow SMP - Register</title>
+
+<link
+rel="stylesheet"
+href="css/style.css">
+<script type="module" src="js/register.js"></script>
+</head>
+
+<body>
+
+<main class="auth-page">
+
+<section class="auth-card">
+
+<div class="brand">
+SHADOW SMP
+</div>
+
+<h1>
+Create Player Account
+</h1>
+
+<form id="registerForm">
+
+<label>
+Full Name
+</label>
+
+<input
+id="name"
+type="text"
+required
+maxlength="80">
+
+<label>
+Minecraft ID
+</label>
+
+<input
+id="minecraftId"
+type="text"
+required
+maxlength="16">
+
+<label>
+Age
+</label>
+
+<input
+id="age"
+type="number"
+min="13"
+max="100"
+required>
+
+<label>
+Email
+</label>
+
+<input
+id="email"
+type="email"
+required>
+
+<label>
+Password
+</label>
+
+<input
+id="password"
+type="password"
+minlength="8"
+required>
+
+<label>
+Country
+</label>
+
+<input
+id="country"
+maxlength="60">
+
+<label>
+Discord Username
+</label>
+
+<input
+id="discord"
+maxlength="50">
+
+<button
+class="btn full"
+type="submit">
+Create Account
+</button>
+
+</form>
+
+<p
+id="registerMessage"
+class="message">
+</p>
+
+<a href="login.html">
+Already have an account?
+</a>
+
+</section>
+
+</main>
+
+<script
+type="module"
+src="js/register.js">
+</script>
+
+</body>
+  </html>
