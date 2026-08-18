@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="SHADOW SMP players"
+  >
+
+  <title>Players — SHADOW SMP</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+      SHADOW SMP
+    </a>
+
+    <button
+      id="menuButton"
+      class="menu-button"
+      type="button"
+      aria-label="Open navigation"
+    >
+      Menu
+    </button>
+
+    <nav
+      id="mainNav"
+      class="main-nav"
+    >
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="rules.html">Rules</a>
+      <a href="players.html">Players</a>
+      <a href="events.html">Events</a>
+      <a href="problems.html">Problems</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="server.html">Server</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="section">
+
+      <div class="section-heading">
+        <p class="eyebrow">
+          COMMUNITY
+        </p>
+
+        <h1>
+          Players
+        </h1>
+
+        <p>
+          View the players of SHADOW SMP.
+        </p>
+      </div>
+
+      <div class="card-grid three">
+
+        <article class="card">
+          <h2>Whitelisted Players</h2>
+
+          <p>
+            Players who are allowed to join
+            the server.
+          </p>
+
+          <div id="whitelistedPlayers">
+            Loading...
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Banned Players</h2>
+
+          <p>
+            Players currently banned from
+            the server.
+          </p>
+
+          <div id="bannedPlayers">
+            Loading...
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Top Players</h2>
+
+          <p>
+            See the best players on
+            SHADOW SMP.
+          </p>
+
+          <div id="topPlayers">
+            Loading...
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <div id="customSections"></div>
+
+  </main>
+
+  <script
+    type="module"
+    src="js/players.js"
+  ></script>
+
+</body>
+      </html>
