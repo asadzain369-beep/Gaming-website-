@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="SHADOW SMP server information"
+  >
+
+  <title>Server — SHADOW SMP</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+      SHADOW SMP
+    </a>
+
+    <button
+      id="menuButton"
+      class="menu-button"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      Menu
+    </button>
+
+    <nav
+      id="mainNav"
+      class="main-nav"
+    >
+      <a href="index.html">Home</a>
+      <a href="rules.html">Rules</a>
+      <a href="players.html">Players</a>
+      <a href="events.html">Events</a>
+      <a href="problems.html">Problems</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="announcements.html">News</a>
+      <a href="server.html">Server</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          SHADOW SMP
+        </p>
+
+        <h1>
+          Server Information
+        </h1>
+
+        <p>
+          Everything you need to know about
+          the SHADOW SMP server.
+        </p>
+
+      </div>
+
+      <div class="card-grid three">
+
+        <article class="card stat-card">
+
+          <span class="label">
+            Status
+          </span>
+
+          <strong id="serverStatus">
+            Loading...
+          </strong>
+
+        </article>
+
+        <article class="card stat-card">
+
+          <span class="label">
+            Players
+          </span>
+
+          <strong id="serverPlayers">
+            Loading...
+          </strong>
+
+        </article>
+
+        <article class="card stat-card">
+
+          <span class="label">
+            Server IP
+          </span>
+
+          <strong id="serverIp">
+            Loading...
+          </strong>
+
+        </article>
+
+      </div>
+
+      <div class="card-grid two">
+
+        <article class="card">
+
+          <h2>
+            Server Details
+          </h2>
+
+          <p>
+            Server IP
+          </p>
+
+          <strong id="serverIpDetails">
+            Loading...
+          </strong>
+
+        </article>
+
+        <article class="card">
+
+          <h2>
+            Online Players
+          </h2>
+
+          <p>
+            Current server player count
+          </p>
+
+          <strong id="serverPlayersDetails">
+            Loading...
+          </strong>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <div id="customSections"></div>
+
+  </main>
+
+  <script
+    type="module"
+    src="js/server.js"
+  ></script>
+
+</body>
+        </html>
